@@ -58,11 +58,10 @@ public class SensitiveFilter {
             tempNode = subNode;
 
             // 设置结束标志
-//            if (i == keyword.length() - 1) {
-//                tempNode.setKeywordEnd(true);
-//            }
+            if (i == keyword.length() - 1) {
+                tempNode.setKeywordEnd(true);
+            }
         }
-        tempNode.setKeywordEnd(true);
     }
 
     /**
