@@ -9,6 +9,8 @@ import org.springframework.data.redis.serializer.RedisSerializer;
 @Configuration
 public class RedisConfig {
 
+    // spring-redis默认使用了jdk自带的序列化, 通过泛型的K和V设置键值对的对象类型
+    // 这里重新定义序列化，令键为String，值为Object，使用json的序列化方式。
     @Bean
     public RedisTemplate<String, Object> redisTemplate(RedisConnectionFactory factory) {
         RedisTemplate<String, Object> template = new RedisTemplate<>();
