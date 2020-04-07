@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 //@Aspect
 public class AlphaAspect {
 
+    // 定义切点  execution(返回值 包.类.方法(参数))
     @Pointcut("execution(* com.nowcoder.community.service.*.*(..))")
     public void pointcut() {
 
