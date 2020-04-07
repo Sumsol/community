@@ -12,3 +12,8 @@ RedisKeyUtil中添加getFolloweeKey和getFollowerKey方法 -> 创建FollowServic
 
 ## 关注列表、粉丝列表
 FollowService中添加findFollowers和findFollowees方法 -> FollowController中添加getFollowees和getFollowers方法 -> 修改profile.html -> 修改followee.html和follower.html 
+
+## 优化登录模块
+RedisKeyUtil中添加getKaptchaKey方法 -> LoginController中重构getKaptcha和login方法
+RedisKeyUtil中添加getTicketKey方法 -> 不推荐使用LoginTicketMapper -> 重构UserServer中的相关方法
+RedisKeyUtil中添加getUserKey方法 -> UserServier中添加缓存方法和修改相应方法
